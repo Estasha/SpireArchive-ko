@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포션 - SpireArchive</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/potions.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">SpireArchive</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#characters" class="nav-link">캐릭터</a></li>
+                    <li><a href="../index.html#cards" class="nav-link">카드</a></li>
+                    <li><a href="../index.html#relics" class="nav-link">유물</a></li>
+                    <li><a href="../index.html#events" class="nav-link">이벤트</a></li>
+                    <li><a href="../index.html#enemies" class="nav-link">적</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main potions-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>포션</h1>
+                <p class="page-description">다양한 효과를 가진 포션 정보와 활용 전략</p>
+            </div>
+
+            <div class="potions-intro">
+                <div class="intro-content">
+                    <h2>포션이란?</h2>
+                    <p>포션은 슬레이 더 스파이어2에서 전투 중 일회성으로 사용할 수 있는 강력한 아이템입니다. 보상, 상점, 이벤트 등에서 얻을 수 있으며 각 포션은 독특한 효과를 가지고 있습니다. 적절한 타이밍에 포션을 사용하여 전투를 유리하게 이끌 수 있습니다.</p>
+                    <div class="intro-image">
+                        <!-- TODO: 포션 예시 이미지 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="potions-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="common">일반 포션</button>
+                    <button class="tab-btn" data-category="uncommon">희귀 포션</button>
+                    <button class="tab-btn" data-category="rare">고급 포션</button>
+                    <button class="tab-btn" data-category="special">특수 포션</button>
+                </div>
+            </div>
+
+            <div class="potions-filter">
+                <select class="filter-select" data-filter="effect">
+                    <option value="all">모든 효과</option>
+                    <option value="offense">공격</option>
+                    <option value="defense">방어</option>
+                    <option value="utility">유틸리티</option>
+                    <option value="healing">회복</option>
+                    <option value="debuff">디버프</option>
+                </select>
+                <select class="filter-select" data-filter="target">
+                    <option value="all">모든 대상</option>
+                    <option value="self">자신</option>
+                    <option value="enemy">적</option>
+                    <option value="all-enemies">모든 적</option>
+                    <option value="cards">카드</option>
+                </select>
+            </div>
+
+            <!-- 일반 포션 -->
+            <div id="common" class="potions-section active">
+                <h2>일반 포션</h2>
+                <div class="potions-grid">
+                    <div class="potion-item" data-effect="offense" data-target="enemy">
+                        <div class="potion-image">
+                            <!-- TODO: 화염 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>화염 포션</h3>
+                            <p class="potion-description">적에게 20의 피해를 입힙니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">공격</span>
+                                <span class="target">적</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 강력한 적을 빠르게 처치할 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="defense" data-target="self">
+                        <div class="potion-image">
+                            <!-- TODO: 방어 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>방어 포션</h3>
+                            <p class="potion-description">12의 방어도를 얻습니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">방어</span>
+                                <span class="target">자신</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 강력한 공격을 받기 전에 사용
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="healing" data-target="self">
+                        <div class="potion-image">
+                            <!-- TODO: 생명력 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>생명력 포션</h3>
+                            <p class="potion-description">체력을 최대 체력의 30% 회복합니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">회복</span>
+                                <span class="target">자신</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 체력이 위험할 때 긴급 회복
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="utility" data-target="cards">
+                        <div class="potion-image">
+                            <!-- TODO: 카드 드로우 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>카드 드로우 포션</h3>
+                            <p class="potion-description">카드를 5장 뽑습니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">유틸리티</span>
+                                <span class="target">카드</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 필요한 카드를 찾을 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="debuff" data-target="enemy">
+                        <div class="potion-image">
+                            <!-- TODO: 약화 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>약화 포션</h3>
+                            <p class="potion-description">적에게 약화 3을 부여합니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">디버프</span>
+                                <span class="target">적</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 강력한 공격을 약화시킬 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="utility" data-target="self">
+                        <div class="potion-image">
+                            <!-- TODO: 에너지 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>에너지 포션</h3>
+                            <p class="potion-description">이번 턴에 에너지를 2 추가로 얻습니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">유틸리티</span>
+                                <span class="target">자신</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 고비용 카드를 사용할 때
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 희귀 포션 -->
+            <div id="uncommon" class="potions-section">
+                <h2>희귀 포션</h2>
+                <div class="potions-grid">
+                    <div class="potion-item" data-effect="offense" data-target="all-enemies">
+                        <div class="potion-image">
+                            <!-- TODO: 폭발 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>폭발 포션</h3>
+                            <p class="potion-description">모든 적에게 15의 피해를 입힙니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">공격</span>
+                                <span class="target">모든 적</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 다수의 적을 동시에 공격할 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="utility" data-target="cards">
+                        <div class="potion-image">
+                            <!-- TODO: 무작위 카드 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>무작위 카드 포션</h3>
+                            <p class="potion-description">무작위 카드를 3장 뽑아 손에 추가합니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">유틸리티</span>
+                                <span class="target">카드</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 예상치 못한 카드가 필요할 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="debuff" data-target="enemy">
+                        <div class="potion-image">
+                            <!-- TODO: 독 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>독 포션</h3>
+                            <p class="potion-description">적에게 독 5를 부여합니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">디버프</span>
+                                <span class="target">적</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 지속적인 피해가 필요할 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="defense" data-target="self">
+                        <div class="potion-image">
+                            <!-- TODO: 재생 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>재생 포션</h3>
+                            <p class="potion-description">재생 5를 얻습니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">방어</span>
+                                <span class="target">자신</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 장기전에서 체력 관리가 필요할 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="utility" data-target="cards">
+                        <div class="potion-image">
+                            <!-- TODO: 카드 비용 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>카드 비용 포션</h3>
+                            <p class="potion-description">이번 턴에 손에 있는 모든 카드의 비용이 0이 됩니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">유틸리티</span>
+                                <span class="target">카드</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 다수의 카드를 한 턴에 사용할 때
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 고급 포션 -->
+            <div id="rare" class="potions-section">
+                <h2>고급 포션</h2>
+                <div class="potions-grid">
+                    <div class="potion-item" data-effect="offense" data-target="enemy">
+                        <div class="potion-image">
+                            <!-- TODO: 힘 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>힘 포션</h3>
+                            <p class="potion-description">힘을 3 얻습니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">공격</span>
+                                <span class="target">자신</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 공격력을 극대화할 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="defense" data-target="self">
+                        <div class="potion-image">
+                            <!-- TODO: 민첩 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>민첩 포션</h3>
+                            <p class="potion-description">민첩을 3 얻습니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">방어</span>
+                                <span class="target">자신</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 방어력을 극대화할 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="utility" data-target="self">
+                        <div class="potion-image">
+                            <!-- TODO: 무적 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>무적 포션</h3>
+                            <p class="potion-description">이번 턴에 피해를 입지 않습니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">유틸리티</span>
+                                <span class="target">자신</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 치명적인 공격을 피해야 할 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="healing" data-target="self">
+                        <div class="potion-image">
+                            <!-- TODO: 완전 회복 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>완전 회복 포션</h3>
+                            <p class="potion-description">체력을 완전히 회복합니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">회복</span>
+                                <span class="target">자신</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 위기 상황에서 완전한 회복이 필요할 때
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 특수 포션 -->
+            <div id="special" class="potions-section">
+                <h2>특수 포션</h2>
+                <div class="potions-grid">
+                    <div class="potion-item" data-effect="utility" data-target="cards">
+                        <div class="potion-image">
+                            <!-- TODO: 복제 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>복제 포션</h3>
+                            <p class="potion-description">선택한 카드를 복제하여 손에 추가합니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">유틸리티</span>
+                                <span class="target">카드</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 중요한 카드를 추가로 사용할 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="utility" data-target="self">
+                        <div class="potion-image">
+                            <!-- TODO: 시간 정지 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>시간 정지 포션</h3>
+                            <p class="potion-description">적의 다음 턴을 건너뜁니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">유틸리티</span>
+                                <span class="target">적</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 강력한 적의 턴을 연기할 때
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="potion-item" data-effect="offense" data-target="enemy">
+                        <div class="potion-image">
+                            <!-- TODO: 저주 포션 이미지 -->
+                        </div>
+                        <div class="potion-details">
+                            <h3>저주 포션</h3>
+                            <p class="potion-description">적의 덱에 무작위 저주 카드를 3장 추가합니다.</p>
+                            <div class="potion-stats">
+                                <span class="effect">디버프</span>
+                                <span class="target">적</span>
+                            </div>
+                            <div class="potion-usage">
+                                <strong>추천 상황:</strong> 적의 덱을 약화시킬 때
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 SpireArchive. 슬레이 더 스파이어2 팬 제작 웹사이트</p>
+            <p><a href="../index.html">메인으로 돌아가기</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/potions.js"></script>
+</body>
+</html>

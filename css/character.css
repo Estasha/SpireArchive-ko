@@ -1,0 +1,331 @@
+/* 캐릭터 페이지 전용 스타일 */
+
+.character-page {
+    padding-top: 100px;
+}
+
+.character-header {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 2px solid #e94560;
+}
+
+.character-portrait {
+    width: 300px;
+    height: 400px;
+    background: rgba(233, 69, 96, 0.1);
+    border: 2px dashed #e94560;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e94560;
+    flex-shrink: 0;
+}
+
+.character-info h1 {
+    font-size: 3rem;
+    color: #e94560;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.character-subtitle {
+    font-size: 1.2rem;
+    color: #b8b8b8;
+    margin-bottom: 2rem;
+}
+
+.character-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+    background: rgba(233, 69, 96, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e94560;
+    min-width: 100px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #b8b8b8;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #e94560;
+}
+
+.character-description,
+.character-abilities,
+.character-cards,
+.character-strategy,
+.character-relics {
+    margin-bottom: 4rem;
+}
+
+.character-description h2,
+.character-abilities h2,
+.character-cards h2,
+.character-strategy h2,
+.character-relics h2 {
+    font-size: 2rem;
+    color: #e94560;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.description-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e94560;
+}
+
+.description-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.character-background {
+    width: 100%;
+    height: 200px;
+    background: rgba(233, 69, 96, 0.1);
+    border: 2px dashed #e94560;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e94560;
+}
+
+.abilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.ability-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #e94560;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ability-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+}
+
+.ability-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: rgba(233, 69, 96, 0.1);
+    border: 2px dashed #e94560;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e94560;
+}
+
+.ability-card h3 {
+    color: #e94560;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.ability-card p {
+    color: #b8b8b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.cards-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #e94560;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-3px);
+}
+
+.card-image {
+    width: 100px;
+    height: 140px;
+    background: rgba(233, 69, 96, 0.1);
+    border: 2px dashed #e94560;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e94560;
+    flex-shrink: 0;
+}
+
+.card-info h3 {
+    color: #e94560;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.card-info p {
+    color: #b8b8b8;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.card-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+}
+
+.cost,
+.type {
+    background: rgba(233, 69, 96, 0.2);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    color: #e94560;
+    border: 1px solid #e94560;
+}
+
+.cards-link {
+    text-align: center;
+}
+
+.strategy-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.strategy-section {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #e94560;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.strategy-section h3 {
+    color: #e94560;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.strategy-section p {
+    color: #b8b8b8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.relics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.relic-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #e94560;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.relic-item:hover {
+    transform: translateY(-5px);
+}
+
+.relic-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: rgba(233, 69, 96, 0.1);
+    border: 2px dashed #e94560;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e94560;
+}
+
+.relic-item h3 {
+    color: #e94560;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.relic-item p {
+    color: #b8b8b8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .character-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .character-portrait {
+        width: 200px;
+        height: 250px;
+    }
+    
+    .character-info h1 {
+        font-size: 2rem;
+    }
+    
+    .character-stats {
+        justify-content: center;
+    }
+    
+    .cards-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .strategy-content {
+        grid-template-columns: 1fr;
+    }
+}

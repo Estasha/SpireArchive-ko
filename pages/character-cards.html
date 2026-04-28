@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐릭터별 카드 - SpireArchive</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cards.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">SpireArchive</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#characters" class="nav-link">캐릭터</a></li>
+                    <li><a href="../index.html#cards" class="nav-link">카드</a></li>
+                    <li><a href="../index.html#relics" class="nav-link">유물</a></li>
+                    <li><a href="../index.html#events" class="nav-link">이벤트</a></li>
+                    <li><a href="../index.html#enemies" class="nav-link">적</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main cards-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>캐릭터별 카드</h1>
+                <p class="page-description">각 캐릭터의 고유 카드와 상세 정보</p>
+            </div>
+
+            <div class="character-tabs">
+                <button class="tab-btn active" data-character="ironclad">아이언클래드</button>
+                <button class="tab-btn" data-character="silent">사일런트</button>
+                <button class="tab-btn" data-character="regent">리젠트</button>
+                <button class="tab-btn" data-character="necrobinder">네크로바인더</button>
+                <button class="tab-btn" data-character="defect">디펙트</button>
+                <button class="tab-btn" onclick="location.href='../colorless-cards.html'">중립</button>
+            </div>
+
+            <!-- 아이언클래드 카드 -->
+            <div id="ironclad" class="character-cards-section active">
+                <h2>아이언클래드 카드</h2>
+                <div class="cards-filter">
+                    <select class="filter-select" data-filter="character">
+                        <option value="all">모든 캐릭터</option>
+                        <option value="ironclad" selected>아이언클래드</option>
+                        <option value="silent">사일런트</option>
+                        <option value="regent">리젠트</option>
+                        <option value="necrobinder">네크로바인더</option>
+                        <option value="defect">디펙트</option>
+                    </select>
+                    <select class="filter-select" data-filter="type">
+                        <option value="all">모든 타입</option>
+                        <option value="attack">공격</option>
+                        <option value="skill">스킬</option>
+                        <option value="power">파워</option>
+                    </select>
+                    <select class="filter-select" data-filter="cost">
+                        <option value="all">모든 비용</option>
+                        <option value="0">비용 0</option>
+                        <option value="1">비용 1</option>
+                        <option value="2">비용 2</option>
+                        <option value="3">비용 3+</option>
+                    </select>
+                </div>
+                <div class="cards-grid">
+                    <div class="card-item" data-type="attack" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 지옥검무 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>지옥검무</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">6의 피해를 입힙니다. 분노 상태일 경우 9의 피해를 입힙니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="attack" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 쇄도 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>쇄도</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">5의 피해를 입힙니다. 분노 상태일 경우 8의 피해를 입힙니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 강타 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>강타</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">8의 방어도를 얻습니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 화염 장벽 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>화염 장벽</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">8의 방어도를 얻습니다. 분노 상태일 경우 카드를 1장 뽑습니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="attack" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 공중제비 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>공중제비</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">12의 피해를 입힙니다. 이 카드를 버릴 시 8의 피해를 입힙니다.</p>
+                            <div class="card-rarity">고급</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="attack" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 충격파 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>충격파</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">14의 피해를 입힙니다. 분노 상태일 경우 3회 추가 공격합니다.</p>
+                            <div class="card-rarity">고급</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 지옥검무 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>지옥검무</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">분노 상태가 됩니다. 카드를 2장 뽑습니다.</p>
+                            <div class="card-rarity">고급</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 불굴 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>불굴</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">체력이 30% 미만일 경우 15의 방어도를 얻습니다.</p>
+                            <div class="card-rarity">고급</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 난관 극복 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>난관 극복</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">체력이 50% 미만일 경우 20의 방어도를 얻고 힘을 3 얻습니다.</p>
+                            <div class="card-rarity">고급</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="0">
+                        <div class="card-image">
+                            <!-- TODO: 무감각 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>무감각</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 0</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">이번 턴에 받는 피해를 절반으로 줄입니다.</p>
+                            <div class="card-rarity">고급</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="power" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 감시병 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>감시병</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 파워</span>
+                            </div>
+                            <p class="card-description">매 턴 시작 시 3의 방어도를 얻습니다.</p>
+                            <div class="card-rarity">고급</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="power" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 금속화 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>금속화</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 파워</span>
+                            </div>
+                            <p class="card-description">방어도만큼 힘을 얻습니다.</p>
+                            <div class="card-rarity">고급</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="power" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 연소 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>연소</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 파워</span>
+                            </div>
+                            <p class="card-description">매 턴 적에게 5의 피해를 입힙니다.</p>
+                            <div class="card-rarity">고급</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="power" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 이도류 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>이도류</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 파워</span>
+                            </div>
+                            <p class="card-description">공격 카드를 2번 사용합니다.</p>
+                            <div class="card-rarity">고급</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="attack" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 연타 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>연타</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">4의 피해를 입힙니다. 이 턴에 이 카드를 다시 사용합니다.</p>
+                            <div class="card-rarity">희귀</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="attack" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 불바다 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>불바다</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">모든 적에게 10의 피해를 입힙니다. 분노 상태일 경우 15의 피해를 입힙니다.</p>
+                            <div class="card-rarity">희귀</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 거대한 바위 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>거대한 바위</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">30의 방어도를 얻습니다. 이 카드는 소멸됩니다.</p>
+                            <div class="card-rarity">희귀</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="3">
+                        <div class="card-image">
+                            <!-- TODO: 2001 스페이스 오디세이 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>2001 스페이스 오디세이</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 3</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">턴을 2번 얻습니다.</p>
+                            <div class="card-rarity">희귀</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="power" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 광란 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>광란</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 파워</span>
+                            </div>
+                            <p class="card-description">분노 상태가 됩니다. 매 턴 카드를 1장 추가로 뽑습니다.</p>
+                            <div class="card-rarity">희귀</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="power" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 난타 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>난타</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 파워</span>
+                            </div>
+                            <p class="card-description">공격 카드를 사용할 때마다 힘을 1 얻습니다.</p>
+                            <div class="card-rarity">희귀</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="attack" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 어둠의 포옹 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>어둠의 포옹</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">7의 피해를 입히고 체력을 7 회복합니다.</p>
+                            <div class="card-rarity">고대의 존재</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 무감각 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>무감각</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">이번 턴에 받는 피해를 무시합니다.</p>
+                            <div class="card-rarity">고대의 존재</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 사일런트 카드 -->
+            <div id="silent" class="character-cards-section">
+                <h2>사일런트 카드</h2>
+                <div class="cards-filter">
+                    <select class="filter-select" data-filter="character">
+                        <option value="all">모든 캐릭터</option>
+                        <option value="ironclad">아이언클래드</option>
+                        <option value="silent" selected>사일런트</option>
+                        <option value="regent">리젠트</option>
+                        <option value="necrobinder">네크로바인더</option>
+                        <option value="defect">디펙트</option>
+                    </select>
+                    <select class="filter-select" data-filter="type">
+                        <option value="all">모든 타입</option>
+                        <option value="attack">공격</option>
+                        <option value="skill">스킬</option>
+                        <option value="power">파워</option>
+                    </select>
+                    <select class="filter-select" data-filter="cost">
+                        <option value="all">모든 비용</option>
+                        <option value="0">비용 0</option>
+                        <option value="1">비용 1</option>
+                        <option value="2">비용 2</option>
+                        <option value="3">비용 3+</option>
+                    </select>
+                </div>
+                <div class="cards-grid">
+                    <div class="card-item" data-type="attack" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 스트라이크 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>스트라이크</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">6의 피해를 입힙니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 디펜드 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>디펜드</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">5의 방어도를 얻습니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="attack" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 서큐버스 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>서큐버스</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">7의 피해를 입히고 3의 독을 부여합니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 회피 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>회피</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">11의 방어도를 얻습니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 약점 노출 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>약점 노출</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">적에게 약점을 2 부여합니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="attack" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 독 단검 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>독 단검</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">3의 피해를 입히고 5의 독을 부여합니다.</p>
+                            <div class="card-rarity">희귀</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 리젠트 카드 -->
+            <div id="regent" class="character-cards-section">
+                <h2>리젠트 카드</h2>
+                <div class="cards-filter">
+                    <select class="filter-select" data-filter="character">
+                        <option value="all">모든 캐릭터</option>
+                        <option value="ironclad">아이언클래드</option>
+                        <option value="silent">사일런트</option>
+                        <option value="regent" selected>리젠트</option>
+                        <option value="necrobinder">네크로바인더</option>
+                        <option value="defect">디펙트</option>
+                    </select>
+                    <select class="filter-select" data-filter="type">
+                        <option value="all">모든 타입</option>
+                        <option value="attack">공격</option>
+                        <option value="skill">스킬</option>
+                        <option value="power">파워</option>
+                    </select>
+                    <select class="filter-select" data-filter="cost">
+                        <option value="all">모든 비용</option>
+                        <option value="0">비용 0</option>
+                        <option value="1">비용 1</option>
+                        <option value="2">비용 2</option>
+                        <option value="3">비용 3+</option>
+                    </select>
+                </div>
+                <div class="cards-grid">
+                    <div class="card-item" data-type="attack" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 스트라이크 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>스트라이크</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">6의 피해를 입힙니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 디펜드 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>디펜드</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">5의 방어도를 얻습니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 커맨드 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>커맨드</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">적을 지배하고 2의 권위를 얻습니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="attack" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 권위 타격 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>권위 타격</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">8의 피해를 입히고 권위를 1 얻습니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="power" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 지배력 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>지배력</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 파워</span>
+                            </div>
+                            <p class="card-description">권위 수치만큼 추가 피해를 입힙니다.</p>
+                            <div class="card-rarity">희귀</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 네크로바인더 카드 -->
+            <div id="necrobinder" class="character-cards-section">
+                <h2>네크로바인더 카드</h2>
+                <div class="cards-filter">
+                    <select class="filter-select" data-filter="character">
+                        <option value="all">모든 캐릭터</option>
+                        <option value="ironclad">아이언클래드</option>
+                        <option value="silent">사일런트</option>
+                        <option value="regent">리젠트</option>
+                        <option value="necrobinder" selected>네크로바인더</option>
+                        <option value="defect">디펙트</option>
+                    </select>
+                    <select class="filter-select" data-filter="type">
+                        <option value="all">모든 타입</option>
+                        <option value="attack">공격</option>
+                        <option value="skill">스킬</option>
+                        <option value="power">파워</option>
+                    </select>
+                    <select class="filter-select" data-filter="cost">
+                        <option value="all">모든 비용</option>
+                        <option value="0">비용 0</option>
+                        <option value="1">비용 1</option>
+                        <option value="2">비용 2</option>
+                        <option value="3">비용 3+</option>
+                    </select>
+                </div>
+                <div class="cards-grid">
+                    <div class="card-item" data-type="attack" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 스트라이크 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>스트라이크</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">6의 피해를 입힙니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 디펜드 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>디펜드</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">5의 방어도를 얻습니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 소환 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>데스 소환</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">해골 전사를 소환하여 매 턴 4의 피해를 입힙니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="attack" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 영혼 타격 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>영혼 타격</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">5의 피해를 입히고 소환수가 있으면 추가 3의 피해를 입힙니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 영혼 흡수 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>영혼 흡수</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">체력을 8 회복하고 소환수를 강화합니다.</p>
+                            <div class="card-rarity">희귀</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 디펙트 카드 -->
+            <div id="defect" class="character-cards-section">
+                <h2>디펙트 카드</h2>
+                <div class="cards-filter">
+                    <select class="filter-select" data-filter="character">
+                        <option value="all">모든 캐릭터</option>
+                        <option value="ironclad">아이언클래드</option>
+                        <option value="silent">사일런트</option>
+                        <option value="regent">리젠트</option>
+                        <option value="necrobinder">네크로바인더</option>
+                        <option value="defect" selected>디펙트</option>
+                    </select>
+                    <select class="filter-select" data-filter="type">
+                        <option value="all">모든 타입</option>
+                        <option value="attack">공격</option>
+                        <option value="skill">스킬</option>
+                        <option value="power">파워</option>
+                    </select>
+                    <select class="filter-select" data-filter="cost">
+                        <option value="all">모든 비용</option>
+                        <option value="0">비용 0</option>
+                        <option value="1">비용 1</option>
+                        <option value="2">비용 2</option>
+                        <option value="3">비용 3+</option>
+                    </select>
+                </div>
+                <div class="cards-grid">
+                    <div class="card-item" data-type="attack" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 스트라이크 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>스트라이크</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 공격</span>
+                            </div>
+                            <p class="card-description">6의 피해를 입힙니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 디펜드 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>디펜드</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">5의 방어도를 얻습니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 라이트닝 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>라이트닝</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">플라즈마 오브를 생성합니다. 턴 종료 시 8의 피해를 입힙니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="1">
+                        <div class="card-image">
+                            <!-- TODO: 프로스트 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>프로스트</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">프로스트 오브를 생성합니다. 턴 종료 시 6의 방어도를 얻습니다.</p>
+                            <div class="card-rarity">일반</div>
+                        </div>
+                    </div>
+                    <div class="card-item" data-type="skill" data-cost="2">
+                        <div class="card-image">
+                            <!-- TODO: 오브 발동 카드 이미지 -->
+                        </div>
+                        <div class="card-details">
+                            <h3>오브 발동</h3>
+                            <div class="card-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="type">타입: 스킬</span>
+                            </div>
+                            <p class="card-description">모든 오브를 즉시 발동시킵니다.</p>
+                            <div class="card-rarity">희귀</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 SpireArchive. 슬레이 더 스파이어2 팬 제작 웹사이트</p>
+            <p><a href="../index.html">메인으로 돌아가기</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cards.js"></script>
+</body>
+</html>

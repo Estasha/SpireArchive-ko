@@ -1,0 +1,541 @@
+/* 고대의 존재 페이지 스타일 */
+
+/* 페이지 헤더 */
+.ancients-page .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.ancients-page .page-header h1 {
+    font-size: 2.5rem;
+    color: #e94560;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ancients-page .page-description {
+    font-size: 1.2rem;
+    color: #b8b8b8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 고대의 존재 소개 */
+.ancients-intro {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #e94560;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+}
+
+.intro-content h2 {
+    font-size: 2rem;
+    color: #e94560;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.intro-content p {
+    color: #b8b8b8;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.intro-image {
+    width: 150px;
+    height: 150px;
+    background: rgba(233, 69, 96, 0.1);
+    border: 2px dashed #e94560;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e94560;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* 카테고리 탭 */
+.ancients-categories {
+    margin-bottom: 2rem;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #e94560;
+    color: #e94560;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: rgba(233, 69, 96, 0.1);
+}
+
+.tab-btn.active {
+    background: #e94560;
+    color: white;
+}
+
+/* 필터 */
+.ancients-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #e94560;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-select:hover {
+    background: rgba(233, 69, 96, 0.1);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+}
+
+.filter-select option {
+    background: #16213e;
+    color: white;
+}
+
+/* 고대의 존재 섹션 */
+.ancients-section {
+    margin-bottom: 3rem;
+}
+
+.ancients-section h2 {
+    font-size: 2rem;
+    color: #e94560;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.ancients-section {
+    display: none;
+}
+
+.ancients-section.active {
+    display: block;
+}
+
+/* 고대의 존재 그리드 */
+.ancients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.ancient-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #e94560;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.ancient-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #e94560, #ff6b6b, #e94560);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.ancient-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+    border-color: #ff6b6b;
+}
+
+.ancient-item.hidden {
+    display: none;
+}
+
+/* 고대의 존재 이미지 */
+.ancient-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    background: rgba(233, 69, 96, 0.1);
+    border: 2px dashed #e94560;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e94560;
+    font-size: 0.7rem;
+    text-align: center;
+    position: relative;
+}
+
+.ancient-image::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid rgba(233, 69, 96, 0.3);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* 고대의 존재 상세 정보 */
+.ancient-details h3 {
+    font-size: 1.6rem;
+    color: #e94560;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ancient-description {
+    color: #b8b8b8;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.ancient-stats {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.ancient-stats span {
+    background: rgba(233, 69, 96, 0.2);
+    color: #e94560;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.ancient-stats .rarity.ancient {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.ancient-stats .rarity.legendary {
+    background: rgba(148, 0, 211, 0.2);
+    color: #9400d3;
+    border: 1px solid rgba(148, 0, 211, 0.3);
+}
+
+.ancient-stats .rarity.mythic {
+    background: rgba(255, 0, 255, 0.2);
+    color: #ff00ff;
+    border: 1px solid rgba(255, 0, 255, 0.3);
+    animation: mythicGlow 2s infinite;
+}
+
+@keyframes mythicGlow {
+    0%, 100% { box-shadow: 0 0 5px rgba(255, 0, 255, 0.5); }
+    50% { box-shadow: 0 0 15px rgba(255, 0, 255, 0.8); }
+}
+
+.ancient-combo {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.ancient-combo strong {
+    color: #e94560;
+}
+
+/* 고대의 존재 모달 */
+.ancient-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.ancient-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border: 3px solid #e94560;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #e94560;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    background: #d63851;
+}
+
+.modal-ancient-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+    background: rgba(233, 69, 96, 0.1);
+    border: 2px dashed #e94560;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e94560;
+    font-size: 0.8rem;
+    text-align: center;
+    position: relative;
+}
+
+.modal-ancient-image::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid rgba(233, 69, 96, 0.3);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.modal-ancient-details {
+    text-align: center;
+}
+
+.modal-ancient-details h3 {
+    font-size: 2.2rem;
+    color: #e94560;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.modal-ancient-description {
+    color: #b8b8b8;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.modal-ancient-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.modal-ancient-stats span {
+    background: rgba(233, 69, 96, 0.2);
+    color: #e94560;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.modal-ancient-stats .rarity.ancient {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.modal-ancient-stats .rarity.legendary {
+    background: rgba(148, 0, 211, 0.2);
+    color: #9400d3;
+    border: 1px solid rgba(148, 0, 211, 0.3);
+}
+
+.modal-ancient-stats .rarity.mythic {
+    background: rgba(255, 0, 255, 0.2);
+    color: #ff00ff;
+    border: 1px solid rgba(255, 0, 255, 0.3);
+    animation: mythicGlow 2s infinite;
+}
+
+.modal-ancient-combo {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.modal-ancient-combo strong {
+    color: #e94560;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .intro-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .intro-image {
+        margin: 0 auto;
+    }
+    
+    .category-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-btn {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .ancients-filter {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-select {
+        width: 200px;
+    }
+    
+    .ancients-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .ancient-item {
+        padding: 1rem;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ancients-page .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .intro-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .intro-content p {
+        font-size: 1rem;
+    }
+    
+    .intro-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .ancients-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .ancient-details h3 {
+        font-size: 1.4rem;
+    }
+    
+    .ancient-description {
+        font-size: 0.9rem;
+    }
+    
+    .modal-ancient-details h3 {
+        font-size: 1.8rem;
+    }
+    
+    .modal-ancient-description {
+        font-size: 1rem;
+    }
+    
+    .ancient-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .modal-ancient-image {
+        width: 120px;
+        height: 120px;
+    }
+}

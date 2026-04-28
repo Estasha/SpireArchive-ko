@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유물 - SpireArchive</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/relics.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">SpireArchive</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#characters" class="nav-link">캐릭터</a></li>
+                    <li><a href="../index.html#cards" class="nav-link">카드</a></li>
+                    <li><a href="../index.html#relics" class="nav-link">유물</a></li>
+                    <li><a href="../index.html#events" class="nav-link">이벤트</a></li>
+                    <li><a href="../index.html#enemies" class="nav-link">적</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main relics-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>유물</h1>
+                <p class="page-description">다양한 효과를 가진 유물 정보와 조합 전략</p>
+            </div>
+
+            <div class="relics-intro">
+                <div class="intro-content">
+                    <h2>유물이란?</h2>
+                    <p>유물은 슬레이 더 스파이어2에서 캐릭터를 강화하는 중요한 아이템입니다. 보스 보상, 상점, 이벤트 등에서 얻을 수 있으며 각 유물은 독특한 효과를 가지고 있습니다. 유물들의 조합을 통해 강력한 시너지를 만들 수 있습니다.</p>
+                    <div class="intro-image">
+                        <!-- TODO: 유물 예시 이미지 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="relics-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="common">일반 유물</button>
+                    <button class="tab-btn" data-category="uncommon">희귀 유물</button>
+                    <button class="tab-btn" data-category="rare">고급 유물</button>
+                    <button class="tab-btn" data-category="boss">희귀 유물</button>
+                    <button class="tab-btn" data-category="event">이벤트 유물</button>
+                </div>
+            </div>
+
+            <div class="relics-filter">
+                <select class="filter-select" data-filter="character">
+                    <option value="all">모든 캐릭터</option>
+                    <option value="ironclad">아이언클래드</option>
+                    <option value="silent">사일런트</option>
+                    <option value="regent">리젠트</option>
+                    <option value="necrobinder">네크로바인더</option>
+                    <option value="defect">디펙트</option>
+                    <option value="colorless">무색</option>
+                </select>
+                <select class="filter-select" data-filter="type">
+                    <option value="all">모든 타입</option>
+                    <option value="combat">전투</option>
+                    <option value="utility">유틸리티</option>
+                    <option value="deck">덱 관리</option>
+                    <option value="economy">경제</option>
+                </select>
+            </div>
+
+            <!-- 일반 유물 -->
+            <div id="common" class="relics-section active">
+                <h2>일반 유물</h2>
+                <div class="relics-grid">
+                    <div class="relic-item" data-character="colorless" data-type="utility">
+                        <div class="relic-image">
+                            <!-- TODO: 피라미드 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>피라미드</h3>
+                            <p class="relic-description">전투 시작 시 에너지를 1 추가로 얻습니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">유틸리티</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 에너지 소모가 많은 덱
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="colorless" data-type="combat">
+                        <div class="relic-image">
+                            <!-- TODO: 거미의 먹이 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>거미의 먹이</h3>
+                            <p class="relic-description">적에게 피해를 입힐 때마다 체력을 1 회복합니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">전투</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 다수 타격 공격 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="ironclad" data-type="combat">
+                        <div class="relic-image">
+                            <!-- TODO: 불꽃 부적 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>불꽃 부적</h3>
+                            <p class="relic-description">전투 시작 시 분노 상태가 됩니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">아이언클래드</span>
+                                <span class="type">전투</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 분노 카드, 공격 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="silent" data-type="combat">
+                        <div class="relic-image">
+                            <!-- TODO: 독침 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>독침</h3>
+                            <p class="relic-description">독 카드 사용 시 추가 독 피해를 입힙니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">사일런트</span>
+                                <span class="type">전투</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 독 부여 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="defect" data-type="utility">
+                        <div class="relic-image">
+                            <!-- TODO: 코어 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>코어</h3>
+                            <p class="relic-description">전투 시작 시 플라즈마 오브를 얻습니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">디펙트</span>
+                                <span class="type">유틸리티</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 오브 생성 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="colorless" data-type="deck">
+                        <div class="relic-image">
+                            <!-- TODO: 머리카락 뭉치 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>머리카락 뭉치</h3>
+                            <p class="relic-description">전투 시작 시 카드를 1장 뽑습니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">덱 관리</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 카드 드로우 덱
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 희귀 유물 -->
+            <div id="uncommon" class="relics-section">
+                <h2>희귀 유물</h2>
+                <div class="relics-grid">
+                    <div class="relic-item" data-character="colorless" data-type="combat">
+                        <div class="relic-image">
+                            <!-- TODO: 혈석 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>혈석</h3>
+                            <p class="relic-description">피해를 입을 때마다 힘을 1 얻습니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">전투</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 공격형 덱, 체력 관리
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="silent" data-type="utility">
+                        <div class="relic-image">
+                            <!-- TODO: 그림자 망토 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>그림자 망토</h3>
+                            <p class="relic-description">전투 시작 시 은신 상태가 됩니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">사일런트</span>
+                                <span class="type">유틸리티</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 약점 노출 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="regent" data-type="combat">
+                        <div class="relic-image">
+                            <!-- TODO: 왕관 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>왕관</h3>
+                            <p class="relic-description">전투 시작 시 3의 권위를 얻습니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">리젠트</span>
+                                <span class="type">전투</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 권위 카드, 지배 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="necrobinder" data-type="combat">
+                        <div class="relic-image">
+                            <!-- TODO: 해골 가면 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>해골 가면</h3>
+                            <p class="relic-description">소환 카드 사용 시 추가 소환수를 얻습니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">네크로바인더</span>
+                                <span class="type">전투</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 소환 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="colorless" data-type="deck">
+                        <div class="relic-image">
+                            <!-- TODO: 사과 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>사과</h3>
+                            <p class="relic-description">체력을 최대 체력까지 회복합니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">덱 관리</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 생존형 덱
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영웅 유물 -->
+            <div id="rare" class="relics-section">
+                <h2>영웅 유물</h2>
+                <div class="relics-grid">
+                    <div class="relic-item" data-character="colorless" data-type="combat">
+                        <div class="relic-image">
+                            <!-- TODO: 시계 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>시계</h3>
+                            <p class="relic-description">매 턴 추가 턴을 1번 얻습니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">전투</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 모든 덱 타입
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="colorless" data-type="utility">
+                        <div class="relic-image">
+                            <!-- TODO: 깃털 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>깃털</h3>
+                            <p class="relic-description">카드 비용이 3 이상일 때 비용이 0이 됩니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">유틸리티</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 고비용 카드 덱
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="colorless" data-type="economy">
+                        <div class="relic-image">
+                            <!-- TODO: 금화 주머니 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>금화 주머니</h3>
+                            <p class="relic-description">전투 시작 시 금화를 300 얻습니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">경제</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 상점 중심 플레이
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 보스 유물 -->
+            <div id="boss" class="relics-section">
+                <h2>보스 유물</h2>
+                <div class="relics-grid">
+                    <div class="relic-item" data-character="colorless" data-type="combat">
+                        <div class="relic-image">
+                            <!-- TODO: 블랙 스타 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>블랙 스타</h3>
+                            <p class="relic-description">모든 공격 카드가 2번 공격합니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">전투</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 공격 카드 중심 덱
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="colorless" data-type="utility">
+                        <div class="relic-image">
+                            <!-- TODO: 소시지 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>소시지</h3>
+                            <p class="relic-description">최대 체력이 15 증가합니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">유틸리티</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 생존형 덱
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="colorless" data-type="deck">
+                        <div class="relic-image">
+                            <!-- TODO: 양피지 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>양피지</h3>
+                            <p class="relic-description">전투 시작 시 카드를 3장 뽑습니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">덱 관리</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 카드 드로우 덱
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 이벤트 유물 -->
+            <div id="event" class="relics-section">
+                <h2>이벤트 유물</h2>
+                <div class="relics-grid">
+                    <div class="relic-item" data-character="colorless" data-type="utility">
+                        <div class="relic-image">
+                            <!-- TODO: 화분 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>화분</h3>
+                            <p class="relic-description">휴식 시 체력을 추가로 15 회복합니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">유틸리티</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 장거리 플레이
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relic-item" data-character="colorless" data-type="economy">
+                        <div class="relic-image">
+                            <!-- TODO: 금화 동전 이미지 -->
+                        </div>
+                        <div class="relic-details">
+                            <h3>금화 동전</h3>
+                            <p class="relic-description">상점에서 카드 구매 시 50% 할인됩니다.</p>
+                            <div class="relic-stats">
+                                <span class="character">모든 캐릭터</span>
+                                <span class="type">경제</span>
+                            </div>
+                            <div class="relic-combo">
+                                <strong>추천 조합:</strong> 상점 중심 플레이
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 SpireArchive. 슬레이 더 스파이어2 팬 제작 웹사이트</p>
+            <p><a href="../index.html">메인으로 돌아가기</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/relics.js"></script>
+</body>
+</html>

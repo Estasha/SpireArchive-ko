@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 - SpireArchive</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/events.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">SpireArchive</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#characters" class="nav-link">캐릭터</a></li>
+                    <li><a href="../index.html#cards" class="nav-link">카드</a></li>
+                    <li><a href="../index.html#relics" class="nav-link">유물</a></li>
+                    <li><a href="../index.html#events" class="nav-link">이벤트</a></li>
+                    <li><a href="../index.html#enemies" class="nav-link">적</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main events-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>이벤트</h1>
+                <p class="page-description">탐험 중 만나는 다양한 이벤트와 선택지별 결과</p>
+            </div>
+
+            <div class="events-intro">
+                <div class="intro-content">
+                    <h2>이벤트란?</h2>
+                    <p>이벤트는 슬레이 더 스파이어2에서 탐험 중 무작위로 발생하는 상황입니다. 각 이벤트는 여러 선택지를 제공하며, 선택에 따라 다양한 보상이나 페널티를 얻을 수 있습니다. 올바른 선택은 승리에 결정적인 역할을 합니다.</p>
+                    <div class="intro-image">
+                        <!-- TODO: 이벤트 예시 이미지 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="events-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="exordium">엑소르디움</button>
+                    <button class="tab-btn" data-category="city">도시</button>
+                    <button class="tab-btn" data-category="thebeyond">더 비욘드</button>
+                    <button class="tab-btn" data-category="theending">더 엔딩</button>
+                    <button class="tab-btn" data-category="special">특수 이벤트</button>
+                </div>
+            </div>
+
+            <div class="events-filter">
+                <select class="filter-select" data-filter="type">
+                    <option value="all">모든 타입</option>
+                    <option value="combat">전투 관련</option>
+                    <option value="reward">보상 관련</option>
+                    <option value="penalty">페널티 관련</option>
+                    <option value="neutral">중립</option>
+                </select>
+                <select class="filter-select" data-filter="rarity">
+                    <option value="all">모든 희귀도</option>
+                    <option value="common">일반</option>
+                    <option value="uncommon">희귀</option>
+                    <option value="rare">영웅</option>
+                </select>
+            </div>
+
+            <!-- 엑소르디움 이벤트 -->
+            <div id="exordium" class="events-section active">
+                <h2>엑소르디움 이벤트</h2>
+                <div class="events-grid">
+                    <div class="event-item" data-type="reward" data-rarity="common">
+                        <div class="event-image">
+                            <!-- TODO: 낯선 신사 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>낯선 신사</h3>
+                            <p class="event-description">낯선 신사가 당신에게 다가와 무언가를 제안합니다.</p>
+                            <div class="event-stats">
+                                <span class="location">엑소르디움</span>
+                                <span class="type">보상 관련</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>수락하기:</strong> 무작위 카드 1장 얻기
+                                </div>
+                                <div class="choice">
+                                    <strong>거절하기:</strong> 체력 6 잃고 금화 50 얻기
+                                </div>
+                                <div class="choice">
+                                    <strong>공격하기:</strong> 전투 시작 (보상: 금화 100)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-item" data-type="combat" data-rarity="common">
+                        <div class="event-image">
+                            <!-- TODO: 길 잃은 소년 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>길 잃은 소년</h3>
+                            <p class="event-description">어린 소년이 길을 잃고 당신에게 도움을 청합니다.</p>
+                            <div class="event-stats">
+                                <span class="location">엑소르디움</span>
+                                <span class="type">전투 관련</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>도와주기:</strong> 체력 15 회복하고 금화 25 잃기
+                                </div>
+                                <div class="choice">
+                                    <strong>무시하기:</strong> 아무 일도 일어나지 않음
+                                </div>
+                                <div class="choice">
+                                    <strong>공격하기:</strong> 전투 시작 (보상: 금화 75)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-item" data-type="neutral" data-rarity="uncommon">
+                        <div class="event-image">
+                            <!-- TODO: 신비로운 제단 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>신비로운 제단</h3>
+                            <p class="event-description">고대의 제단이 빛을 발하고 있습니다.</p>
+                            <div class="event-stats">
+                                <span class="location">엑소르디움</span>
+                                <span class="type">중립</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>기도하기:</strong> 체력을 최대 체력까지 회복
+                                </div>
+                                <div class="choice">
+                                    <strong>제물 바치기:</strong> 카드 1장 제거하고 유물 1개 얻기
+                                </div>
+                                <div class="choice">
+                                    <strong>파괴하기:</strong> 금화 150 얻고 저주 카드 1장 얻기
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-item" data-type="penalty" data-rarity="common">
+                        <div class="event-image">
+                            <!-- TODO: 덫 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>덫</h3>
+                            <p class="event-description">위험한 덫이 발견되었습니다.</p>
+                            <div class="event-stats">
+                                <span class="location">엑소르디움</span>
+                                <span class="type">페널티 관련</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>조심스럽게 해체:</strong> 체력 10 잃고 금화 100 얻기
+                                </div>
+                                <div class="choice">
+                                    <strong>무시하고 지나가기:</strong> 아무 일도 일어나지 않음
+                                </div>
+                                <div class="choice">
+                                    <strong>강제로 열기:</strong> 체력 25 잃고 금화 200 얻기
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 도시 이벤트 -->
+            <div id="city" class="events-section">
+                <h2>도시 이벤트</h2>
+                <div class="events-grid">
+                    <div class="event-item" data-type="reward" data-rarity="uncommon">
+                        <div class="event-image">
+                            <!-- TODO: 도서관 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>도서관</h3>
+                            <p class="event-description">오래된 도서관에서 지식을 찾을 수 있습니다.</p>
+                            <div class="event-stats">
+                                <span class="location">도시</span>
+                                <span class="type">보상 관련</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>연구하기:</strong> 카드 2장 제거
+                                </div>
+                                <div class="choice">
+                                    <strong>훔치기:</strong> 무작위 카드 2장 얻기
+                                </div>
+                                <div class="choice">
+                                    <strong>방해하기:</strong> 체력 15 잃고 금화 150 얻기
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-item" data-type="combat" data-rarity="rare">
+                        <div class="event-image">
+                            <!-- TODO: 길드장 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>길드장</h3>
+                            <p class="event-description">도시 길드의 장로가 당신에게 도전장을 내밉니다.</p>
+                            <div class="event-stats">
+                                <span class="location">도시</span>
+                                <span class="type">전투 관련</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>받아들이기:</strong> 강력한 적과 전투 (보상: 희귀 유물)
+                                </div>
+                                <div class="choice">
+                                    <strong>거절하기:</strong> 존경을 잃고 금화 100 잃기
+                                </div>
+                                <div class="choice">
+                                    <strong>도전하기:</strong> 두 명의 적과 연속 전투 (보상: 영웅 카드)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-item" data-type="neutral" data-rarity="common">
+                        <div class="event-image">
+                            <!-- TODO: 시장 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>시장</h3>
+                            <p class="event-description">번화한 시장에서 다양한 거래가 이루어집니다.</p>
+                            <div class="event-stats">
+                                <span class="location">도시</span>
+                                <span class="type">중립</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>물건 구매:</strong> 금화 100으로 무작위 유물 구매
+                                </div>
+                                <div class="choice">
+                                    <strong>물건 판매:</strong> 카드 1장 판매하여 금화 75 얻기
+                                </div>
+                                <div class="choice">
+                                    <strong>훔치기:</strong> 50% 확률로 유물 얻기, 실패 시 체력 20 잃음
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 더 비욘드 이벤트 -->
+            <div id="thebeyond" class="events-section">
+                <h2>더 비욘드 이벤트</h2>
+                <div class="events-grid">
+                    <div class="event-item" data-type="reward" data-rarity="rare">
+                        <div class="event-image">
+                            <!-- TODO: 차원문 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>차원문</h3>
+                            <p class="event-description">이세계로 통하는 차원문이 발견되었습니다.</p>
+                            <div class="event-stats">
+                                <span class="location">더 비욘드</span>
+                                <span class="type">보상 관련</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>들어가기:</strong> 무작위 영웅 카드 1장 얻기
+                                </div>
+                                <div class="choice">
+                                    <strong>연구하기:</strong> 모든 카드 비용이 1 감소
+                                </div>
+                                <div class="choice">
+                                    <strong>파괴하기:</strong> 체력 30 잃고 영웅 유물 1개 얻기
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-item" data-type="combat" data-rarity="uncommon">
+                        <div class="event-image">
+                            <!-- TODO: 정령의 무덤 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>정령의 무덤</h3>
+                            <p class="event-description">고대 정령의 무덤에서 강력한 힘이 느껴집니다.</p>
+                            <div class="event-stats">
+                                <span class="location">더 비욘드</span>
+                                <span class="type">전투 관련</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>정령과 대화:</strong> 강력한 정령과 전투 (보상: 영웅 유물)
+                                </div>
+                                <div class="choice">
+                                    <strong>제물 바치기:</strong> 카드 3장 제거하고 체력 20 회복
+                                </div>
+                                <div class="choice">
+                                    <strong>무덤 약탈:</strong> 체력 25 잃고 금화 300 얻기
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 더 엔딩 이벤트 -->
+            <div id="theending" class="events-section">
+                <h2>더 엔딩 이벤트</h2>
+                <div class="events-grid">
+                    <div class="event-item" data-type="reward" data-rarity="rare">
+                        <div class="event-image">
+                            <!-- TODO: 최종 관문 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>최종 관문</h3>
+                            <p class="event-description">스파이어의 정점에 도착했습니다.</p>
+                            <div class="event-stats">
+                                <span class="location">더 엔딩</span>
+                                <span class="type">보상 관련</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>관문 통과:</strong> 최종 보스와 전투
+                                </div>
+                                <div class="choice">
+                                    <strong>힘 흡수:</strong> 체력 50 잃고 모든 카드 강화
+                                </div>
+                                <div class="choice">
+                                    <strong>돌아가기:</strong> 금화 500 얻고 이전 층으로 돌아가기
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 특수 이벤트 -->
+            <div id="special" class="events-section">
+                <h2>특수 이벤트</h2>
+                <div class="events-grid">
+                    <div class="event-item" data-type="neutral" data-rarity="rare">
+                        <div class="event-image">
+                            <!-- TODO: 신의 시험 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>신의 시험</h3>
+                            <p class="event-description">신들이 당신의 자격을 시험하고 있습니다.</p>
+                            <div class="event-stats">
+                                <span class="location">특수</span>
+                                <span class="type">중립</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>힘의 시험:</strong> 체력 1로 시작하고 강력한 버프 얻기
+                                </div>
+                                <div class="choice">
+                                    <strong>지혜의 시험:</strong> 카드 10장 얻고 덱 크기 2배로
+                                </div>
+                                <div class="choice">
+                                    <strong>인내의 시험:</strong> 모든 저주 카드 제거
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-item" data-type="reward" data-rarity="rare">
+                        <div class="event-image">
+                            <!-- TODO: 시간의 균열 이미지 -->
+                        </div>
+                        <div class="event-details">
+                            <h3>시간의 균열</h3>
+                            <p class="event-description">시간이 뒤틀리는 균열이 나타났습니다.</p>
+                            <div class="event-stats">
+                                <span class="location">특수</span>
+                                <span class="type">보상 관련</span>
+                            </div>
+                            <div class="event-choices">
+                                <h4>선택지:</h4>
+                                <div class="choice">
+                                    <strong>균열 통과:</strong> 이번 전투에서 2번의 추가 턴 얻기
+                                </div>
+                                <div class="choice">
+                                    <strong>균열 조작:</strong> 모든 카드 비용이 0이 됨
+                                </div>
+                                <div class="choice">
+                                    <strong>균열 닫기:</strong> 체력 40 회복
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 SpireArchive. 슬레이 더 스파이어2 팬 제작 웹사이트</p>
+            <p><a href="../index.html">메인으로 돌아가기</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/events.js"></script>
+</body>
+</html>

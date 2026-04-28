@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무색 카드 - SpireArchive</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cards.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">SpireArchive</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#characters" class="nav-link">캐릭터</a></li>
+                    <li><a href="../index.html#cards" class="nav-link">카드</a></li>
+                    <li><a href="../index.html#relics" class="nav-link">유물</a></li>
+                    <li><a href="../index.html#events" class="nav-link">이벤트</a></li>
+                    <li><a href="../index.html#enemies" class="nav-link">적</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main cards-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>무색 카드</h1>
+                <p class="page-description">모든 캐릭터가 사용할 수 있는 범용 카드</p>
+            </div>
+
+            <div class="colorless-intro">
+                <div class="intro-content">
+                    <h2>무색 카드란?</h2>
+                    <p>무색 카드는 모든 캐릭터가 덱에 넣고 사용할 수 있는 범용 카드입니다. 보상, 상점, 이벤트 등에서 얻을 수 있으며 각 캐릭터의 플레이 스타일을 보완해주는 중요한 역할을 합니다.</p>
+                    <div class="intro-image">
+                        <!-- TODO: 무색 카드 예시 이미지 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-filter">
+                <select class="filter-select" data-filter="type">
+                    <option value="all">모든 타입</option>
+                    <option value="attack">공격</option>
+                    <option value="skill">스킬</option>
+                    <option value="power">파워</option>
+                    <option value="curse">저주</option>
+                </select>
+                <select class="filter-select" data-filter="cost">
+                    <option value="all">모든 비용</option>
+                    <option value="0">비용 0</option>
+                    <option value="1">비용 1</option>
+                    <option value="2">비용 2</option>
+                    <option value="3">비용 3+</option>
+                </select>
+                <select class="filter-select" data-filter="rarity">
+                    <option value="all">모든 희귀도</option>
+                    <option value="common">일반</option>
+                    <option value="uncommon">희귀</option>
+                    <option value="rare">영웅</option>
+                </select>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card-item" data-type="attack" data-cost="2" data-rarity="common">
+                    <div class="card-image">
+                        <!-- TODO: 폭탄 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>폭탄</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 2</span>
+                            <span class="type">타입: 공격</span>
+                        </div>
+                        <p class="card-description">10의 피해를 입힙니다. 이 카드를 버릴 시 8의 피해를 입힙니다.</p>
+                        <div class="card-rarity">일반</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="skill" data-cost="1" data-rarity="common">
+                    <div class="card-image">
+                        <!-- TODO: 패닉 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>패닉</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 1</span>
+                            <span class="type">타입: 스킬</span>
+                        </div>
+                        <p class="card-description">카드를 3장 뽑습니다. 이 카드를 버릴 시 카드를 2장 뽑습니다.</p>
+                        <div class="card-rarity">일반</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="skill" data-cost="0" data-rarity="common">
+                    <div class="card-image">
+                        <!-- TODO: 밴 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>밴</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 0</span>
+                            <span class="type">타입: 스킬</span>
+                        </div>
+                        <p class="card-description">덱에서 선택한 카드를 제거합니다.</p>
+                        <div class="card-rarity">일반</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="attack" data-cost="1" data-rarity="uncommon">
+                    <div class="card-image">
+                        <!-- TODO: 신비한 구 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>신비한 구</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 1</span>
+                            <span class="type">타입: 공격</span>
+                        </div>
+                        <p class="card-description">7의 피해를 입힙니다. 이 카드를 버릴 시 7의 피해를 입힙니다.</p>
+                        <div class="card-rarity">희귀</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="skill" data-cost="1" data-rarity="uncommon">
+                    <div class="card-image">
+                        <!-- TODO: 메디테이션 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>메디테이션</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 1</span>
+                            <span class="type">타입: 스킬</span>
+                        </div>
+                        <p class="card-description">에너지를 2 얻습니다.</p>
+                        <div class="card-rarity">희귀</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="skill" data-cost="2" data-rarity="uncommon">
+                    <div class="card-image">
+                        <!-- TODO: 적응 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>적응</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 2</span>
+                            <span class="type">타입: 스킬</span>
+                        </div>
+                        <p class="card-description">체력을 12 회복하고 카드를 1장 뽑습니다.</p>
+                        <div class="card-rarity">희귀</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="attack" data-cost="2" data-rarity="rare">
+                    <div class="card-image">
+                        <!-- TODO: 악몽 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>악몽</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 2</span>
+                            <span class="type">타입: 공격</span>
+                        </div>
+                        <p class="card-description">모든 적에게 15의 피해를 입힙니다.</p>
+                        <div class="card-rarity">영웅</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="skill" data-cost="2" data-rarity="rare">
+                    <div class="card-image">
+                        <!-- TODO: 먹이 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>먹이</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 2</span>
+                            <span class="type">타입: 스킬</span>
+                        </div>
+                        <p class="card-description">카드를 3장 뽑고 에너지를 1 얻습니다.</p>
+                        <div class="card-rarity">영웅</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="power" data-cost="1" data-rarity="rare">
+                    <div class="card-image">
+                        <!-- TODO: 메타포즈 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>메타포즈</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 1</span>
+                            <span class="type">타입: 파워</span>
+                        </div>
+                        <p class="card-description">이번 전투 동안 모든 무색 카드의 비용이 0이 됩니다.</p>
+                        <div class="card-rarity">영웅</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="curse" data-cost="0" data-rarity="curse">
+                    <div class="card-image">
+                        <!-- TODO: 순수함 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>순수함</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 0</span>
+                            <span class="type">타입: 저주</span>
+                        </div>
+                        <p class="card-description">이 카드를 손에서 버릴 수 없습니다. 이 카드를 뽑으면 에너지를 1 잃습니다.</p>
+                        <div class="card-rarity">저주</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="curse" data-cost="2" data-rarity="curse">
+                    <div class="card-image">
+                        <!-- TODO: 클레이토포비아 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>클레이토포비아</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 2</span>
+                            <span class="type">타입: 저주</span>
+                        </div>
+                        <p class="card-description">이 카드를 손에서 버릴 수 없습니다. 이 카드를 뽑으면 체력을 6 잃습니다.</p>
+                        <div class="card-rarity">저주</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="skill" data-cost="1" data-rarity="common">
+                    <div class="card-image">
+                        <!-- TODO: 발견 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>발견</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 1</span>
+                            <span class="type">타입: 스킬</span>
+                        </div>
+                        <p class="card-description">카드를 3장 뽑고 그중 1장을 선택하여 손에 유지합니다.</p>
+                        <div class="card-rarity">일반</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="attack" data-cost="1" data-rarity="uncommon">
+                    <div class="card-image">
+                        <!-- TODO: 회전 베기 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>회전 베기</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 1</span>
+                            <span class="type">타입: 공격</span>
+                        </div>
+                        <p class="card-description">5의 피해를 입힙니다. 이 카드를 버릴 시 5의 피해를 입힙니다.</p>
+                        <div class="card-rarity">희귀</div>
+                    </div>
+                </div>
+
+                <div class="card-item" data-type="skill" data-cost="0" data-rarity="uncommon">
+                    <div class="card-image">
+                        <!-- TODO: 스왑 카드 이미지 -->
+                    </div>
+                    <div class="card-details">
+                        <h3>스왑</h3>
+                        <div class="card-stats">
+                            <span class="cost">비용: 0</span>
+                            <span class="type">타입: 스킬</span>
+                        </div>
+                        <p class="card-description">손에 있는 카드 1장을 버리고 카드를 1장 뽑습니다.</p>
+                        <div class="card-rarity">희귀</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 SpireArchive. 슬레이 더 스파이어2 팬 제작 웹사이트</p>
+            <p><a href="../index.html">메인으로 돌아가기</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cards.js"></script>
+</body>
+</html>

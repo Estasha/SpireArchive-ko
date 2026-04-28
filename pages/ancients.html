@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고대의 존재 - SpireArchive</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ancients.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">SpireArchive</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#characters" class="nav-link">캐릭터</a></li>
+                    <li><a href="../index.html#cards" class="nav-link">카드</a></li>
+                    <li><a href="../index.html#relics" class="nav-link">유물</a></li>
+                    <li><a href="../index.html#events" class="nav-link">이벤트</a></li>
+                    <li><a href="../index.html#enemies" class="nav-link">적</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main ancients-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>고대의 존재</h1>
+                <p class="page-description">강력한 고대의 존재 카드 정보와 조합 전략</p>
+            </div>
+
+            <div class="ancients-intro">
+                <div class="intro-content">
+                    <h2>고대의 존재란?</h2>
+                    <p>고대의 존재는 슬레이 더 스파이어2에서 가장 강력하고 희귀한 카드입니다. 특정 조건을 만족해야만 얻을 수 있으며, 일반 카드와는 차원이 다른 효과를 가지고 있습니다. 적절한 조합을 통해 게임을 뒤집을 수 있는 핵심적인 카드들입니다.</p>
+                    <div class="intro-image">
+                        <!-- TODO: 고대의 존재 예시 이미지 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="ancients-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="attack">공격 고대의 존재</button>
+                    <button class="tab-btn" data-category="skill">스킬 고대의 존재</button>
+                    <button class="tab-btn" data-category="power">파워 고대의 존재</button>
+                    <button class="tab-btn" data-category="special">특수 고대의 존재</button>
+                </div>
+            </div>
+
+            <div class="ancients-filter">
+                <select class="filter-select" data-filter="character">
+                    <option value="all">모든 캐릭터</option>
+                    <option value="ironclad">아이언클래드</option>
+                    <option value="silent">사일런트</option>
+                    <option value="regent">리젠트</option>
+                    <option value="necrobinder">네크로바인더</option>
+                    <option value="defect">디펙트</option>
+                    <option value="colorless">무색</option>
+                </select>
+                <select class="filter-select" data-filter="cost">
+                    <option value="all">모든 비용</option>
+                    <option value="0">비용 0</option>
+                    <option value="1">비용 1</option>
+                    <option value="2">비용 2</option>
+                    <option value="3">비용 3</option>
+                    <option value="4+">비용 4+</option>
+                </select>
+                <select class="filter-select" data-filter="rarity">
+                    <option value="all">모든 희귀도</option>
+                    <option value="ancient">고대의 존재</option>
+                    <option value="legendary">전설</option>
+                    <option value="mythic">신화</option>
+                </select>
+            </div>
+
+            <!-- 공격 고대의 존재 -->
+            <div id="attack" class="ancients-section active">
+                <h2>공격 고대의 존재</h2>
+                <div class="ancients-grid">
+                    <div class="ancient-item" data-character="ironclad" data-cost="3" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 파괴의 검 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>파괴의 검</h3>
+                            <p class="ancient-description">적에게 40의 피해를 입힙니다. 분노 상태일 경우 추가로 20의 피해를 입힙니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 3</span>
+                                <span class="character">아이언클래드</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 분노 카드, 힘 증가 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="silent" data-cost="2" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 암살의 단검 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>암살의 단검</h3>
+                            <p class="ancient-description">적에게 25의 피해를 입히고 은신 상태가 됩니다. 은신 상태일 경우 추가로 15의 피해를 입힙니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="character">사일런트</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 은신 카드, 약점 노출 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="regent" data-cost="4" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 왕의 명령 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>왕의 명령</h3>
+                            <p class="ancient-description">적에게 35의 피해를 입히고 권위를 5 얻습니다. 권위가 10 이상일 경우 추가로 20의 피해를 입힙니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 4</span>
+                                <span class="character">리젠트</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 권위 카드, 지배 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="necrobinder" data-cost="3" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 죽음의 손길 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>죽음의 손길</h3>
+                            <p class="ancient-description">적에게 30의 피해를 입히고 소환수를 2 소환합니다. 소환수가 있을 경우 추가로 10의 피해를 입힙니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 3</span>
+                                <span class="character">네크로바인더</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 소환 카드, 네크로맨시 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="defect" data-cost="3" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 오브 폭풍 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>오브 폭풍</h3>
+                            <p class="ancient-description">모든 오브를 발동시키고 각 오브가 15의 피해를 입힙니다. 오브가 3개 이상일 경우 추가로 25의 피해를 입힙니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 3</span>
+                                <span class="character">디펙트</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 오브 생성 카드, 오브 강화 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="colorless" data-cost="0" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 무한의 힘 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>무한의 힘</h3>
+                            <p class="ancient-description">힘을 10 얻고 이번 턴에 힘만큼 추가 피해를 입힙니다. 이 카드는 전투당 한 번만 사용할 수 있습니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 0</span>
+                                <span class="character">무색</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 모든 공격 카드
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 스킬 고대의 존재 -->
+            <div id="skill" class="ancients-section">
+                <h2>스킬 고대의 존재</h2>
+                <div class="ancients-grid">
+                    <div class="ancient-item" data-character="ironclad" data-cost="2" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 불굴의 의지 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>불굴의 의지</h3>
+                            <p class="ancient-description">체력을 50 회복하고 분노 상태가 됩니다. 체력이 30% 미만일 경우 추가로 10의 방어도를 얻습니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="character">아이언클래드</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 생존 카드, 분노 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="silent" data-cost="1" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 그림자 걸음 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>그림자 걸음</h3>
+                            <p class="ancient-description">카드를 5장 뽑고 은신 상태가 됩니다. 은신 상태일 경우 뽑은 카드 비용이 0이 됩니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="character">사일런트</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 은신 카드, 카드 드로우 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="regent" data-cost="3" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 제국의 부흥 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>제국의 부흥</h3>
+                            <p class="ancient-description">권위를 8 얻고 카드를 3장 뽑습니다. 권위가 15 이상일 경우 추가로 2턴 동안 모든 카드 비용이 1 감소합니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 3</span>
+                                <span class="character">리젠트</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 권위 카드, 고비용 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="necrobinder" data-cost="2" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 죽음의 춤 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>죽음의 춤</h3>
+                            <p class="ancient-description">소환수를 3 소환하고 모든 소환수의 공격력을 5 증가시킵니다. 소환수가 5개 이상일 경우 추가로 2턴 동안 모든 소환수가 2배 공격합니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="character">네크로바인더</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 소환 카드, 소환수 강화 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="defect" data-cost="2" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 에너지 과부하 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>에너지 과부하</h3>
+                            <p class="ancient-description">에너지를 3 얻고 모든 오브를 강화합니다. 오브가 2개 이상일 경우 추가로 이번 턴에 에너지를 2 더 얻습니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="character">디펙트</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 오브 생성 카드, 고비용 카드
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 파워 고대의 존재 -->
+            <div id="power" class="ancients-section">
+                <h2>파워 고대의 존재</h2>
+                <div class="ancients-grid">
+                    <div class="ancient-item" data-character="ironclad" data-cost="1" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 파괴의 분노 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>파괴의 분노</h3>
+                            <p class="ancient-description">이번 전투 동안 분노 상태가 유지되고 힘을 5 얻습니다. 분노 상태에서 공격 카드가 50% 더 많은 피해를 입힙니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="character">아이언클래드</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 모든 공격 카드, 힘 증가 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="silent" data-cost="1" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 영원한 어둠 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>영원한 어둠</h3>
+                            <p class="ancient-description">이번 전투 동안 은신 상태가 유지되고 매 턴 시작 시 카드를 2장 뽑습니다. 은신 상태에서 모든 카드 비용이 1 감소합니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="character">사일런트</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 은신 카드, 카드 드로우 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="regent" data-cost="2" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 절대 권력 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>절대 권력</h3>
+                            <p class="ancient-description">이번 전투 동안 권위를 10 얻고 매 턴 시작 시 권위를 2 얻습니다. 권위가 20 이상일 경우 모든 적에게 매 턴 10의 피해를 입힙니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="character">리젠트</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 권위 카드, 지배 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="necrobinder" data-cost="2" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 죽음의 군주 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>죽음의 군주</h3>
+                            <p class="ancient-description">이번 전투 동안 소환수 최대치가 10 증가하고 모든 소환수의 공격력이 5 증가합니다. 소환수가 7개 이상일 경우 모든 소환수가 2배 공격합니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 2</span>
+                                <span class="character">네크로바인더</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 소환 카드, 소환수 강화 카드
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="defect" data-cost="1" data-rarity="ancient">
+                        <div class="ancient-image">
+                            <!-- TODO: 무한 오브 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>무한 오브</h3>
+                            <p class="ancient-description">이번 전투 동안 오브 최대치가 10 증가하고 매 턴 시작 시 랜덤 오브를 1 얻습니다. 오브가 5개 이상일 경우 모든 오브가 2배 효과를 가집니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="character">디펙트</span>
+                                <span class="rarity">고대의 존재</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 오브 생성 카드, 오브 강화 카드
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 특수 고대의 존재 -->
+            <div id="special" class="ancients-section">
+                <h2>특수 고대의 존재</h2>
+                <div class="ancients-grid">
+                    <div class="ancient-item" data-character="colorless" data-cost="0" data-rarity="legendary">
+                        <div class="ancient-image">
+                            <!-- TODO: 시간 조작 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>시간 조작</h3>
+                            <p class="ancient-description">적의 다음 3턴을 건너뛰고 이번 턴에 에너지를 5 얻습니다. 이 카드는 덱에 1장만 포함될 수 있습니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 0</span>
+                                <span class="character">무색</span>
+                                <span class="rarity">전설</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 모든 덱 타입
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="colorless" data-cost="1" data-rarity="legendary">
+                        <div class="ancient-image">
+                            <!-- TODO: 현실 조각 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>현실 조각</h3>
+                            <p class="ancient-description">이번 전투에서 사용한 카드를 모두 복제하여 덱에 추가합니다. 이 카드는 덱에 1장만 포함될 수 있습니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 1</span>
+                                <span class="character">무색</span>
+                                <span class="rarity">전설</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 모든 덱 타입
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ancient-item" data-character="colorless" data-cost="0" data-rarity="mythic">
+                        <div class="ancient-image">
+                            <!-- TODO: 신의 축복 이미지 -->
+                        </div>
+                        <div class="ancient-details">
+                            <h3>신의 축복</h3>
+                            <p class="ancient-description">체력을 완전히 회복하고 이번 전투 동안 모든 능력치가 2배가 됩니다. 이 카드는 게임당 1번만 사용할 수 있습니다.</p>
+                            <div class="ancient-stats">
+                                <span class="cost">비용: 0</span>
+                                <span class="character">무색</span>
+                                <span class="rarity">신화</span>
+                            </div>
+                            <div class="ancient-combo">
+                                <strong>추천 조합:</strong> 모든 덱 타입
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 SpireArchive. 슬레이 더 스파이어2 팬 제작 웹사이트</p>
+            <p><a href="../index.html">메인으로 돌아가기</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/ancients.js"></script>
+</body>
+</html>
